@@ -1,0 +1,74 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="row mt-5 mb-3">
+    <div class="col text-center">
+        <h2 class="text-primary font-weight-bold">Register Account</h2>
+    </div>
+</div>
+<!-- Create Account section -->
+<div class="row">
+    <div class="col-6 mx-auto">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-9 pl-4">
+                    <div asp-validation-summary="All" class="text-danger small"></div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.Email" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Input.Email" placeholder="Email" class="form-control input-material" />
+                    <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.Password" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Input.Password" class="form-control input-material" placeholder="Password"/>
+                    <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.ConfirmPassword" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Input.ConfirmPassword" class="form-control input-material" placeholder="Confirm Password"/>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.FulllName" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Input.FulllName" class="form-control input-material" placeholder="Full name"/>
+                    <span asp-validation-for="Input.FulllName" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Input.Phone" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Input.Phone" class="form-control input-material" placeholder="Phone Number"/>
+                    <span asp-validation-for="Input.Phone" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Input.Address" class="col-4 col-form-label">Address</label>
+                <div class="col-8">
+                    <input asp-for="Input.Address" class="form-control input-material" placeholder="Address"/>
+                    <span asp-validation-for="Input.Address" class="text-danger small"></span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-material float-right mt-4 px-4" id="submitButton">Register</button>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
