@@ -83,6 +83,16 @@ namespace MobileStore.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    // Catch role before redirect to approriate action
+                    MobileStoreUser user = await _userManager.FindByNameAsync(Input.Email);
+                    if(await _userManager.IsInRoleAsync(user, "Admin"))
+                    {
+                        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                    }
+                    else if(await _userManager.IsInRoleAsync(user, "User"))
+                    {
+                        return RedirectToAction("Index", "User", new { area = "User" });
+                    }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

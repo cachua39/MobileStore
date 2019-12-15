@@ -44,6 +44,8 @@ namespace MobileStore
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,12 +70,21 @@ namespace MobileStore
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+
+            app.UseMvc(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                endpoints.MapRoute(
+               name: "Admin",
+               template: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+
+                endpoints.MapRoute(
+                name: "User",
+                template: "{area:exists}/{controller=User}/{action=Index}/{id?}");
+
+                endpoints.MapRoute(
+                name: "default",
+                template: "{area=User}/{controller=User}/{action=Index}/{id?}");
+
             });
 
             CreateRoles(serviceProvider).Wait();
@@ -84,7 +95,7 @@ namespace MobileStore
             //initializing custom roles   
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var UserManager = serviceProvider.GetRequiredService<UserManager<MobileStoreUser>>();
-            string[] roleNames = { "Admin", "User"};
+            string[] roleNames = { "Admin", "User" };
             IdentityResult roleResult;
 
             foreach (var roleName in roleNames)
@@ -98,7 +109,7 @@ namespace MobileStore
             }
 
             MobileStoreUser user = await UserManager.FindByEmailAsync("admin@gmail.com");
-            
+
             //MobileStoreUser user1 = await UserManager.FindByEmailAsync("luonglvdemo@gmail.com");
 
             //if(user1 != null)
