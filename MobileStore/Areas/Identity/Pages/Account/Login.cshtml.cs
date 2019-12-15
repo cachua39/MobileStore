@@ -87,11 +87,11 @@ namespace MobileStore.Areas.Identity.Pages.Account
                     MobileStoreUser user = await _userManager.FindByNameAsync(Input.Email);
                     if(await _userManager.IsInRoleAsync(user, "Admin"))
                     {
-                        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                        return RedirectToAction("Index", "Product", new { area = "Admin" });
                     }
                     else if(await _userManager.IsInRoleAsync(user, "User"))
                     {
-                        return RedirectToAction("Index", "User", new { area = "User" });
+                        return RedirectToAction("Index", "Home", new { area = "User" });
                     }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);

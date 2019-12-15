@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MobileStore.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles="Admin")]
     [Area("Admin")]
-    public class AdminController : Controller
+    public class CouponController : Controller
     {
         public IActionResult Index()
         {

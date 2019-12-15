@@ -147,6 +147,8 @@ D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Ar
 D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
 D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
 D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
-D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Admin\Index.cshtml.g.cs
-D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\User\Index.cshtml.g.cs
 D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Home\Index.cshtml.g.cs
+D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Coupon\Index.cshtml.g.cs
+D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Support\Index.cshtml.g.cs
+D:\myProjects\vs_studio\MobileStore\MobileStore\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Support\Index.cshtml.g.cs

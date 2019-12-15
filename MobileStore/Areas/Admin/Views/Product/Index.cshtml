@@ -1,9 +1,9 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
-    Layout = "_Layout";
+    ViewData["Title"] = "Manage Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<!-- Index for Admin's products -->
 <div class="row mt-5">
     <div class="col text-center">
         <h3 class="font-weight-bold">Manage All Phones</h3>
@@ -20,7 +20,7 @@
     </div>
 </div><!-- End create and search row section -->
 <!-- Table for all phone management section -->
-<Table class="table mt-3">
+<table class="table mt-3">
     <thead>
         <tr>
             <th>No.</th>
@@ -39,7 +39,7 @@
         <tr>
             <td>1</td>
             <td>
-                <img src="assets/products/636863648672228468_ss-galaxy-s10-plus-trang-1_1.jpg"
+                <img src="~/assets/products/636863648672228468_ss-galaxy-s10-plus-trang-1_1.jpg"
                      class="img-manage">
             </td>
             <td class="font-weight-bold">Samsung Galaxy S10 Plus</td>
@@ -66,7 +66,7 @@
         <tr>
             <td>2</td>
             <td>
-                <img src="assets/products/636863648672228468_ss-galaxy-s10-plus-trang-1_1.jpg"
+                <img src="~/assets/products/636863648672228468_ss-galaxy-s10-plus-trang-1_1.jpg"
                      class="img-manage">
             </td>
             <td class="font-weight-bold">Samsung Galaxy S10 Plus</td>
@@ -91,4 +91,4 @@
             </td>
         </tr>
     </tbody>
-</Table><!-- End table for all phone management section -->
+</table><!-- End table for all phone management section -->

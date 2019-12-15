@@ -74,16 +74,8 @@ namespace MobileStore
             app.UseMvc(endpoints =>
             {
                 endpoints.MapRoute(
-               name: "Admin",
-               template: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
-
-                endpoints.MapRoute(
-                name: "User",
-                template: "{area:exists}/{controller=User}/{action=Index}/{id?}");
-
-                endpoints.MapRoute(
                 name: "default",
-                template: "{area=User}/{controller=User}/{action=Index}/{id?}");
+                template: "{area=User}/{controller=Home}/{action=Index}/{id?}");
 
             });
 
